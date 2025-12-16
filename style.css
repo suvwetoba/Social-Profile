@@ -1,0 +1,138 @@
+/* ------------------- */
+/* 1. Variables       */
+/* ------------------- */
+:root {
+  /* Colors - Reference: style-guide.md */
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+  /* Typography */
+  --ff-primary: 'Inter', sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+/* ------------------- */
+/* 2. Reset           */
+/* ------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------- */
+/* 3. Global Styles   */
+/* ------------------- */
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-grey-900);
+  color: var(--clr-white);
+  font-size: 14px;
+  line-height: 1.5;
+  
+  /* Center the card vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* ------------------- */
+/* 4. Card Component  */
+/* ------------------- */
+.profile-card {
+  background-color: var(--clr-grey-800);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 384px; /* Matches standard mobile card width */
+}
+
+/* Image */
+.profile-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto; /* Centers image and adds bottom space */
+}
+
+/* Text Content */
+.name {
+  font-size: 1.1rem;
+  font-weight: var(--fw-bolder);
+  margin-bottom: 0.25rem;
+  color: var(--clr-white);
+}
+
+.location {
+  color: var(--clr-green);
+  font-weight: var(--fw-bold);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  color: var(--clr-white); /* Keeping it white based on design */
+  margin-bottom: 1.5rem;
+  font-weight: var(--fw-regular);
+  opacity: 0.9; /* Slight transparency for visual hierarchy */
+}
+
+/* ------------------- */
+/* 5. Social Buttons  */
+/* ------------------- */
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between buttons */
+}
+
+.social-links a {
+  display: block;
+  background-color: var(--clr-grey-700);
+  color: var(--clr-white);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover & Focus States */
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-900);
+  outline: none; /* Clean focus state */
+}
+
+/* ------------------- */
+/* 6. Footer          */
+/* ------------------- */
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-white);
+  opacity: 0.5;
+}
+
+.attribution a {
+  color: var(--clr-green);
+  text-decoration: none;
+}
